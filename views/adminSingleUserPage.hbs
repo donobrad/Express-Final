@@ -1,0 +1,23 @@
+<h1>Administer User: {{FirstName}} {{LastName}}</h1>
+<h2><a class="delete" href="/users/admin/editUser/{{UserId}}/deleteUser/{{UserId}}">Delete This User</a></h2><br>
+
+<p>FirstName: {{FirstName}}</p>
+<p>LastName: {{LastName}}</p>
+<p>Email: {{Email}}</p>
+<p>Username: {{Username}}</p>
+<hr>
+<h2>This Users' Posts</h2>
+<ul>
+    {{#each posts}}
+    <li>Title: {{PostTitle}}<br>
+        Body: {{PostBody}} <br />
+        <a class="delete" href="/users/admin/editUser/{{UserId}}/delete/{{PostId}}">Delete This Post</a>
+        <hr>
+    </li>
+    {{/each}}
+</ul>
+<hr>
+<div>
+    <a href="/users/profile">Back To Your Profile Page</a><br>
+    <a href="/users/admin">Back To Admin Page</a>
+</div>

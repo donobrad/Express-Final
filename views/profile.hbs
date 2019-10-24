@@ -1,0 +1,22 @@
+<h1>Your profile information.</h1>
+<h2>{{FirstName}} {{LastName}}</h2>
+<h2>Username: {{Username}}</h2>
+<h5><a href="/users/logout">Logout</a></h5><br>
+<h5 id="funkyh6"><a id="adminLink" href="/users/admin">Admin Page</a></h5><br>
+<hr>
+<h1>Your Posts</h1>
+
+<a href="/users/createPost">Create A New Post</a>
+<hr>
+
+
+<ul>
+    {{#each posts}}
+    <li  id="userPost">
+        <h3>Title: {{PostTitle}}</h3>
+        <p>{{PostBody}}</p>
+        <a class="delete" href="/users/deletePost/{{PostId}}">Delete This Post</a><br>
+        <a href="/users/updatePost/{{PostId}}">Edit This Post</a>
+    </li>
+    {{/each}}
+</ul>

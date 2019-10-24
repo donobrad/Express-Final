@@ -1,0 +1,10 @@
+<h1>Admin's List Of Users</h1>
+<h2>Click On A User To View Their Info</h2>
+<hr>
+<ul>
+    {{#each users}}
+    <li><h4><a href="/users/admin/editUser/{{UserId}}">{{FirstName}} {{LastName}}</a></h4></li>
+    {{/each}}
+</ul>
+<hr>
+<a id="backProfile" href="/users/profile">Back To Your Profile Page</a>
